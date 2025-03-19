@@ -12,7 +12,7 @@ using Transaction.Core;
 namespace Transaction.Core.Migrations
 {
     [DbContext(typeof(TransactionDbContext))]
-    [Migration("20250314212850_Initial")]
+    [Migration("20250317214131_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -48,6 +48,10 @@ namespace Transaction.Core.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
+
+                    b.Property<string>("TimeZone")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("TransactionDate")
                         .HasColumnType("timestamp with time zone");

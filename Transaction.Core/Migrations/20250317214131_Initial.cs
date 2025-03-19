@@ -20,7 +20,8 @@ namespace Transaction.Core.Migrations
                     Email = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
                     Amount = table.Column<decimal>(type: "numeric(18,2)", nullable: false),
                     TransactionDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ClientLocation = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false)
+                    ClientLocation = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    TimeZone = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
