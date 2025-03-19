@@ -23,6 +23,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Transaction.Core\Transaction.Core.csproj" />
+      <ProjectReference Include="..\Transaction.Service\Transaction.Service.csproj" />
     </ItemGroup>
 
 </Project>
